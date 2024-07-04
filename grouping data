@@ -1,0 +1,13 @@
+select origin, count(*)
+from cars group by "origin"
+select cars , count(*)
+from cars group by cars
+having count(*) > 1
+select car , count(*)
+from cars where origin = 'japan'
+group by cars
+having count(*) > 
+select cars , count(*) as count
+from cars group by cars
+having count(*) > 1
+order by count desc

@@ -1,0 +1,18 @@
+create table stud(sid int , sname varchar (30))
+select *from stud
+insert into stud values (1 , 'abinaya'),
+(3 , 'gomathi'),
+(2 , 'kokila'),
+(6 , 'anand')
+create table mark(sid int , mark int , grade char(5))
+select * from mark
+insert into mark values (1 , 99 , 'o'),
+(3 , 89 , 'a2') , (5 , 94 ,'a1')
+select s.sid , sname , mark , grade from stud s,mark m
+where s.sid = m.sid
+select s.sid , sname , mark , grade from stud s left join mark m
+on s.sid =m.sid
+select s.sid , sname , mark , grade from stud s right join mark m
+on s.sid = m.sid
+select s.sid , sname , mark , grade from stud s full join mark m
+on s.sid = m.sid

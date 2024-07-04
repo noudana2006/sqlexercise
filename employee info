@@ -1,0 +1,18 @@
+create table employeeinfo(id integer, empfname text, emplname text,
+	department text , prject text , address text , dob date , gender text)
+select * from employeeinfo
+insert into employeeinfo values ('1' ,'rohit' , 'gupta' , 'admin' , 'pi' , 'delhi' , '02/12/1979' , 'male'),
+('2' , 'rahul' , 'mahajan' , 'admin' , 'p2' , 'mumbai' , '10/10/1986' , 'male')
+insert into employeeinfo values(3 , 'sonia' , 'banerjee' , 'hr' , 'p3' , 'pune' , '05/06/1983' ,'female'),
+(4 , 'ankita' , 'kapoor' , 'hr' , 'p4' , 'chennai' , '28/11/1983' , 'female'),
+(5 , 'swathi' , 'garg' , 'hr' , 'p5' , 'delhi' , '06/04/1991' , 'female')
+-- write a qurey to retrieve the top n records
+	
+select * from employeeinfo limit 5
+-- write a qurey to obtain relevant records from the employeeinfo table ordered by department in 
+-- ascending order and emplname in descending order
+select * from employeeinfo order by department asc , emplname desc
+-- create a query to fetch details of employees having "delhi" as their address
+select * from employeeinfo where address = 'delhi'
+	-- write a query to get the details of employees whose empfname end with 'a'
+select empfname from employeeinfo where empfname ilike '%a'
