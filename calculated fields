@@ -1,0 +1,7 @@
+select car ||'   :   '||weight from cars
+select cars ||'   :   '|| weight
+as "cars  : weight "from cars
+select cars , weight*1000
+as "weight (grams)" from cars
+select cars, mpg /cylinders
+as mpg/cyl from cars
